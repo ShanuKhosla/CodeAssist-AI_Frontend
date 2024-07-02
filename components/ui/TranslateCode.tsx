@@ -3,7 +3,7 @@ import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const OptimizedCode = ({ optimizedCode }) => {
+const OptimizedCode = ({ optimizedCode }: { optimizedCode: string }) => {
   return (
     <div className="pb-24 pt-10 max-lg:pb-10  h-screen"> {/* Add padding bottom to create space for the scrollbar */}
       <h3 className='text-3xl font-semibold'>Translated Code:</h3>

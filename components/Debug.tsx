@@ -24,7 +24,7 @@ const Debug = () => {
     }
   };
 
-  const handleKeyPress = (e) => {
+  const handleKeyPress = (e: { key: string; preventDefault: () => void; }) => {
     if (e.key === 'Enter') {
       e.preventDefault(); // Prevent the default action (new line) when Enter is pressed
       if (!loading && code.trim() !== '') {
@@ -40,7 +40,6 @@ const Debug = () => {
         <div className='px-60 max-lg:p-1'>
           <textarea
             placeholder='Enter code...'
-            type="text"
             value={code}
             onChange={(e) => setCode(e.target.value)}
             onKeyPress={handleKeyPress} // Add onKeyPress event listener

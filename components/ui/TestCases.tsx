@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TestCases = ({ testCases }) => {
+const TestCases = ({ testCases }: {testCases: string}) => {
   return (
 <div className="pb-24 pt-10 max-lg:pb-10  h-screen"> {/* Add padding bottom to create space for the scrollbar */}
       <h3 className='text-3xl font-semibold'>Generated Test Cases:</h3>

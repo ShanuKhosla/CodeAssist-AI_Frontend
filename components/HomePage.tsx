@@ -1,7 +1,6 @@
 'use client'
 import React from 'react';
 import { motion } from "framer-motion";
-import { HeroHighlight, Highlight } from './ui/hero-highlight';
 import { AuroraBackground } from './ui/aurora-background';
 import { FlipWords } from './ui/flip-words';
 import Image from 'next/image';
