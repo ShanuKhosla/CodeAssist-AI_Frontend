@@ -13,7 +13,7 @@ const Translate = () => {
   const handleTranslate = async () => {
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/translate-code', {
+      const response = await axios.post('https://codeassist-ai.onrender.com/translate-code', {
         code,
         toLang,
       });

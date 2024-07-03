@@ -12,7 +12,7 @@ const Testing = () => {
   const handleTesting = async () => {
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/test-code', {
+      const response = await axios.post('https://codeassist-ai.onrender.com/test-code', {
         code,
       });
       setOutput(response.data.output.testCases); // Update state with Gemini's output

@@ -12,7 +12,7 @@ const Debug = () => {
   const handleDebug = async () => { 
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/debug-code', {
+      const response = await axios.post('https://codeassist-ai.onrender.com/debug-code', {
         code,
       });
       setOutput(response.data.output); // Update state with Gemini's output
