@@ -1,13 +1,19 @@
 'use client'
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from "framer-motion";
 import { AuroraBackground } from './ui/aurora-background';
 import { FlipWords } from './ui/flip-words';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaHome } from 'react-icons/fa';
+import axios from 'axios';
 
 const HomePage = () => {
+  useEffect(() => {
+    axios.get('https://codeassist-ai.onrender.com/ping')
+      .then(response => console.log('Backend is Awake: ', response))
+      .catch(error => console.error('Error waking up backend: ', error));
+  }, []);
   const words = ["optimize", "translate", "explain", "debug", "test"];
   return (
     <>
